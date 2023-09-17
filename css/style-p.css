@@ -151,7 +151,7 @@ header {
         transform: translateY(5px);
     }
     .navbar.open{
-        right: 2%;
+        right: -80%;
     }
 }
 
