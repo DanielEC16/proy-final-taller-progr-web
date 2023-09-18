@@ -34,6 +34,7 @@ header {
     background: transparent;
     padding: 28px 12%;
     transition: all .50s ease;
+    backdrop-filter: blur(5px);
 }
 
 /* CCS NAVBAR */
@@ -43,10 +44,9 @@ header {
     align-items: center;
 }
 
-.logo i {
-    color: var(--main-color);
-    font-size: 28px;
-    margin-right: 3px;
+.logo img{
+    width: 3em;
+    height: 3em;
 }
 
 .logo span {
@@ -182,7 +182,3 @@ h3 {
     top: 250px;
 }
 
-header {
-    background: transparent;
-    backdrop-filter: blur(5px);
-}
