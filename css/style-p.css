@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+/* CSS GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +35,8 @@ header {
     padding: 28px 12%;
     transition: all .50s ease;
 }
+
+/* CCS NAVBAR */
 
 .logo {
     display: flex;
@@ -150,19 +153,29 @@ header {
         color: var(--text-color);
         transform: translateY(5px);
     }
-    .navbar.open{
+
+    .navbar.open {
         right: -80%;
     }
 }
 
+/* CSS SWIPPER */
 
-.carousel-item img {
+.swiper {
     width: 100%;
-    height: 100%;
-    filter: brightness(0.5);
+    height: 500px;
 }
 
-p , h3{
+img {
+    width: 100%;
+    height: 700px;
+    filter: brightness(0.5);
+    object-fit: cover;
+}
+
+
+p,
+h3 {
     position: absolute;
     text-align: center;
     padding: 0 250px;
