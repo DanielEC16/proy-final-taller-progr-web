@@ -162,14 +162,14 @@ header {
 /* CSS SWIPPER */
 
 .swiper {
-    width: 100%;
-    height: 500px;
+    width: 100em;
+    height: 50em;
 }
 
 img {
-    width: 100%;
-    height: 700px;
-    filter: brightness(0.5);
+    width: 70em;
+    height: 30rem;
+    filter: brightness(0.7);
     object-fit: cover;
 }
 
@@ -178,7 +178,6 @@ p,
 h3 {
     position: absolute;
     text-align: center;
-    padding: 0 250px;
-    top: 250px;
+    padding: 0 250em;
+    top: 250em;
 }
-

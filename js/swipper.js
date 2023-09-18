@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: true,
-    effect: 'fade',
+    effect: 'cube',
     autoplay: {
         delay: 2500,
     },
