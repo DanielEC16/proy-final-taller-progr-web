@@ -156,14 +156,20 @@ header {
 }
 
 
-.carousel-item>img {
+.carousel-item img {
     width: 100%;
     height: 100%;
     filter: brightness(0.5);
 }
 
-nav {
+p , h3{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;
+}
+
+header {
     background: transparent;
-    backdrop-filter: blur(20px);
-    border-radius: 5px;
+    backdrop-filter: blur(5px);
 }
