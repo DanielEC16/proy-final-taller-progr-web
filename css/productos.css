@@ -132,7 +132,7 @@ nav .btn:hover {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     padding: 0 3rem;
 }
 
@@ -150,6 +150,7 @@ nav .btn:hover {
     align-items: center;
     gap: 10px;
     padding: 0 20px;
+    font-size: 15px;
 }
 
 .img img {
@@ -158,4 +159,16 @@ nav .btn:hover {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+}
+
+.line-division{
+    width: 100%;
+    height: 1px;
+    margin: 4rem 0;
+    border: 1px solid #ffffff;
+    opacity: 0.1;
+}
+
+s{
+    margin-right: 2rem;
 }
