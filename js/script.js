@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".swiper-container-2", {
         slidesPerView: 6,
-        spaceBetween: 1,
+        spaceBetween: 0,
     });
 });
 

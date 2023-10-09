@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-color: #090909;
+    --principal-text-color: #FFFFFF;
+    --secondary-text-color: #ca958a;
+    --buttons-primary-color: #624343;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 30px;
+}
+
+.nav-logo img {
+    width: 100%;
+    display: flex;
+}
+
+nav {
+    box-shadow: 0px 1px 20px #000000;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--principal-text-color);
+}
+
+nav {
+    margin: 0 0 -10px 0;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.nav-logo {
+    width: 130px;
+    display: flex;
+}
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    gap: .5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--principal-text-color);
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 5px;
+    left: 50%;
+    background-color: var(--secondary-text-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.link a:hover::after {
+    width: 80%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--principal-text-color);
+    background-color: var(--buttons-primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+nav .btn:hover {
+    filter: brightness(0.5);
+}
+
+.list-products{
+    margin-top: 3rem;
+}
+.tittle{
+    color: white;
+    margin: 0 13rem;
+    font-size: 2rem;
+    margin: 1rem 4rem;
+}
+
+.productos {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 3rem;
+}
+
+.card {
+    display: flex;
+    width: 27rem;
+    height: 14rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.img img {
+    width: 15rem;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
