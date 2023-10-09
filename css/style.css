@@ -7,10 +7,6 @@
     --buttons-primary-color: #624343;
 }
 
-.nav-logo img {
-    width: 100%;
-    display: flex;
-}
 
 * {
     padding: 0;
@@ -23,17 +19,35 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 30px;
+}
+
+/* NAVBAR START */
+
+
+.nav-logo img {
+    width: 100%;
+    display: flex;
 }
 
 nav {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    /* Sombra para un efecto visual */
+    box-shadow: 0px 1px 20px #000000;
     position: fixed;
     width: 100%;
     height: 5rem;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -43,7 +57,7 @@ a {
 }
 
 nav {
-    margin: auto;
+    margin: 0 0 -10px 0;
     padding: 2rem 4rem;
     display: flex;
     align-items: center;
@@ -108,13 +122,18 @@ nav .btn:hover {
     filter: brightness(0.5);
 }
 
-.swiper-slide {
+
+/* SLIDER START */
+header {
+    width: 100%;
+}
+
+header .swiper-slide {
     text-align: center;
 }
 
-.swiper-slide img {
+header .swiper-slide img {
     width: 100%;
-    margin: -20px;
     height: 45rem;
     object-fit: cover;
     object-position: center;
@@ -133,6 +152,7 @@ nav .btn:hover {
     color: #ffffff;
     font-size: 3rem;
     font-weight: 600;
+    text-shadow: 0px 5px 6px #000000;
 }
 
 .text-swiper h1 {
@@ -140,6 +160,8 @@ nav .btn:hover {
     font-size: 10rem;
     font-weight: 900;
     margin-top: -3rem;
+    text-shadow: 0px 20px 15px #000000;
+    letter-spacing: 5px;
 }
 
 .text-swiper p {
@@ -148,11 +170,130 @@ nav .btn:hover {
     font-weight: 600;
     margin-top: -1rem;
     margin-bottom: 5rem;
+    text-shadow: 0px 5px 6px #000000;
 }
 
-section {
-    margin-top: 3rem;
-    flex-wrap: wrap;
-    font-size: 10rem;
+header .btn {
+    box-shadow: 0px 4px 5px #000000;
+}
+
+
+/* SECTION PRODUCTOS */
+
+.productos-container {
     color: white;
+    margin: 4rem 2rem;
+}
+
+.productos-container h3 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+
+.card {
+    width: 100%;
+    height: 20rem;
+    margin: -5rem 0;
+}
+
+
+.position-bottom {
+    object-position: bottom;
+}
+
+.position-center {
+    object-position: center;
+}
+
+.productos-container .card .content img {
+    object-fit: cover;
+    width: 294px;
+    height: 156px;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 10px #2c2c2c;
+}
+
+
+
+
+/* SECTION DIRECCION */
+
+
+.direccion-container h3 {
+    color: white;
+    font-size: 3rem;
+    margin-top: -3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section .maps-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+
+
+.direcciones-container .tittle {
+    background-color: #2e2626;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+    border: solid 1px #b9b8b8;
+}
+
+.direcciones {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 35rem;
+    height: 475px;
+
+}
+
+
+.direcciones .sede {
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    border: solid 0.5px #b9b8b8;
+    background-color: #302929;
+}
+
+.sede:hover {
+    background-color: rgb(186, 186, 186);
+    color: black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.sede-active {
+    width: 100%;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    border: solid 0.5px #b9b8b8;
+    background-color: rgb(186, 186, 186);
+}
+
+
+
+
+
+
+
+.contact-container {
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
