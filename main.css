@@ -1,0 +1,73 @@
+/* SECTION DIRECCION */
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.direccion-container h3 {
+    color: white;
+    font-size: 3rem;
+    margin-top: -3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section .maps-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+
+iframe {
+    border: 0;
+    width: 800px;
+    height: 550px;
+}
+
+
+.direcciones-container .tittle {
+    background-color: #2e2626;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+    border: solid 1px #b9b8b8;
+}
+
+.direcciones {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 35rem;
+    height: 475px;
+
+}
+
+
+.direcciones .sede {
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    border: solid 0.5px #b9b8b8;
+    background-color: #302929;
+}
+
+.sede:hover {
+    background-color: rgb(186, 186, 186);
+    color: black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.sede-active {
+    width: 100%;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    border: solid 0.5px #b9b8b8;
+    background-color: rgb(186, 186, 186);
+}
