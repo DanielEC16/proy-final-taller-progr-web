@@ -192,7 +192,7 @@ header .btn {
 
 
 .card {
-    width: 100rem;
+    width: 100%;
     height: 20rem;
     margin: -5rem 0;
 }
@@ -225,13 +225,21 @@ header .btn {
 
 
 
+
 /* SECTION DIRECCION */
+
+
+iframe {
+    border: 0;
+    width: 800px;
+    height: 550px;
+}
 
 
 .direccion-container h3 {
     color: white;
     font-size: 3rem;
-    margin-top: -3rem;
+    margin-top: 0rem;
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -263,7 +271,6 @@ section .maps-container {
     overflow-x: hidden;
     width: 35rem;
     height: 475px;
-
 }
 
 
@@ -320,4 +327,297 @@ footer ul {
     flex-direction: column;
     gap: 15px;
     font-size: 1rem;
+}
+
+
+section {
+    overflow: hidden !important;
+}
+
+/* VIEW LAPTOPS */
+
+@media screen and (max-width:1880px) {
+
+    header .swiper-slide img {
+        height: 30rem;
+    }
+
+    .text-swiper span {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .text-swiper h1 {
+        font-size: 8rem;
+        font-weight: 800;
+    }
+
+    .productos-container h3 {
+        font-size: 4rem;
+    }
+
+    .productos-container .card .content img {
+        width: 270px;
+        height: 140px;
+    }
+
+    section .maps-container {
+        gap: 1rem;
+        height: 500px;
+    }
+
+    .direcciones {
+        width: 700px;
+        height: 420px;
+    }
+
+    iframe,
+    .direcciones-container {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+/* VIEW MINI LAPTOPS O TABLETS */
+
+
+@media screen and (max-width:1450px) {
+    header .swiper-slide img {
+        height: 28rem;
+    }
+
+    .text-swiper span {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+
+    .text-swiper h1 {
+        font-size: 6rem;
+        font-weight: 800;
+        margin-top: -2rem;
+    }
+
+    .text-swiper p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: -1rem;
+        margin-bottom: 4rem;
+        text-shadow: 0px 5px 6px #000000;
+    }
+
+    header .btn {
+        font-size: 0.9rem;
+    }
+
+    .productos-container h3 {
+        font-size: 2rem;
+    }
+
+    .productos-container .card .content img {
+        width: 330px;
+        height: 170px;
+    }
+
+    section .swiper-wrapper {
+        display: flex;
+        gap: 4rem;
+    }
+
+    section .maps-container {
+        gap: 2rem;
+        height: 500px;
+    }
+
+    .direcciones {
+        width: 600px;
+        height: 420px;
+    }
+
+    iframe,
+    .direcciones-container {
+        width: 600px;
+        height: 500px;
+    }
+}
+
+
+
+/* VIEW TABLETS */
+
+
+@media screen and (max-width:1350px) {
+
+    nav .nav-links,
+    nav .btn {
+        display: none;
+    }
+
+    .productos-container .card .content img {
+        width: 370px;
+        height: 170px;
+    }
+
+    section .swiper-wrapper {
+        display: flex;
+        gap: -4rem;
+    }
+
+
+
+    section .maps-container {
+        gap: 3rem;
+        height: 500px;
+    }
+
+    .direcciones {
+        width: 550px;
+        height: 420px;
+    }
+
+    iframe,
+    .direcciones-container {
+        width: 550px;
+        height: 500px;
+    }
+
+
+}
+
+
+@media screen and (max-width:1200px) {
+    section .swiper-wrapper {
+        display: flex;
+        gap: 4rem;
+    }
+
+    section .maps-container {
+        gap: 0.5rem;
+        height: 550px;
+    }
+
+    
+}
+
+
+@media screen and (max-width:1100px) {
+    section .swiper-wrapper {
+        display: flex;
+        gap: 6rem;
+    }
+}
+
+
+
+/* VIEW CEL ROTATE */
+@media screen and (max-width:950px) {
+    .productos-container .card .content img {
+        width: 200px;
+        height: 100px;
+    }
+
+    section .swiper-wrapper {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .card {
+        margin-bottom: -9rem;
+    }
+
+
+    section .maps-container {
+        gap: 1rem;
+        height: 450px;
+    }
+
+    .direcciones {
+        width: 350px;
+        height: 380px;
+    }
+
+    iframe,
+    .direcciones-container {
+        width: 350px;
+        height: 450px;
+    }
+}
+
+/* VIEW CEL */
+@media screen and (max-width:700px) {
+
+    header .swiper-slide img {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .text-swiper span {
+        font-size: 1rem;
+    }
+
+    .text-swiper h1 {
+        font-size: 4rem;
+        letter-spacing: 3px;
+        margin-top: -1.7rem;
+    }
+
+    .text-swiper p {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    header .btn {
+        display: none;
+    }
+
+
+    .productos-container .card .content img {
+        width: 250px;
+        height: 170px;
+    }
+
+    section .swiper-wrapper {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+
+    iframe {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+
+
+    header .swiper-slide img {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .productos-container .card .content img {
+        width: 150px;
+        height: 120px;
+    }
+
+    section .swiper-wrapper {
+        display: flex;
+        gap: 0rem;
+    }
+
+
+
+    .card {
+        margin-bottom: -7rem;
+
+    }
+
+
+
+
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var swiper1 = new Swiper(".swiper-container-1", {
-        effect: 'fade',
+        effect:'fade',
         
         loop: true,
         autoplay: {
@@ -13,10 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper('.swiper-container-2', {
-
+        
         breakpoints: {
             0: {
-                slidesPerView: 3,
+                slidesPerView: 2,
+                spaceBetween: 0,
+            },
+            400: {
+                slidesPerView: 2,
                 spaceBetween: 0,
             },
             700: {
@@ -38,8 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             },
             1680: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 20
+            },
+            1730:{
+                slidesPerView:6,
+                spaceBetween:0
             }
         }
     });
