@@ -32,7 +32,7 @@
     </div>
     <ul class="nav-links">
       <li class="link"><a href="">Inicio</a></li>
-      <li class="link"><a href="productos.html">Productos</a></li>
+      <li class="link"><a href="productos.php">Productos</a></li>
       <li class="link"><a href="">Direccion</a></li>
       <li class="link"><a href="">Contacto</a></li>
     </ul>
