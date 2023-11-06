@@ -17,7 +17,7 @@
             </a>
         </div>
         <ul class="nav-links">
-            <li class="link"><a href="index.html">Inicio</a></li>
+            <li class="link"><a href="index.php">Inicio</a></li>
             <li class="link"><a href="">Productos</a></li>
             <li class="link"><a href="">Direccion</a></li>
             <li class="link"><a href="">Contacto</a></li>
@@ -130,6 +130,29 @@
                             </div>
                         </div>
                     </div>
+                    <?php
+    include("../Database/conexion.php");
+
+    $query = "SELECT * FROM productos";
+    $resultado = $conexion->query($query);
+
+    while ($row = $resultado->fetch_assoc()) {
+        ?>
+        <div class="card">
+            <div class="content">
+                <div class="img">
+                <img src="data:image/jpg;base64,<?php echo base64_encode($row['ruta_imagen']); ?>">
+                </div>
+                <div class="details">
+                    <p><strong><?php echo $row['nombre']; ?></strong></p>
+                    <p>"<?php echo $row['descripcion']; ?>"</p>
+                    <p><strong>S/<?php echo $row['precio']; ?></strong></p>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ADMINISTRATOR</title>
     <link rel="stylesheet" href="../CSS/admin.css">
 </head>
 <body>
@@ -21,10 +21,11 @@
             <p>Imagen</p>
             <input type="file" name="imagen" id="">
             <br>
+            <br>
             <input type="submit" value="Aceptar">
         </form>
     </div>
-
+<br>
     <div class="datos-data-container">
         <table border="2">
         <thead>
