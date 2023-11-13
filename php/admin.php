@@ -10,17 +10,16 @@
     <h1>ADMINISTRATOR</h1>
     <div class="container">
         <form action="../Database/proceso_guardar.php" method="POST" enctype="multipart/form-data">
-            <p>Codigo</p>
-            <input type="text" name="codigo" id="">
-            <p>Nombre del Producto</p>
-            <input type="text" name="prod_name" id="">
-            <p>Descripcion</p>
-            <input type="text" name="descripcion" id="">
-            <p>Precio</p>
-            <input type="number" name="precio" id="">
-            <p>Imagen</p>
-            <input type="file" name="imagen" id="">
-            <br>
+            <span>Codigo</span>
+            <input type="text" name="codigo" id=""><br>
+            <span>Nombre del Producto</span>
+            <input type="text" name="prod_name" id=""><br>
+            <span>Descripcion</span>
+            <input type="text" name="descripcion" id=""><br>
+            <span>Precio</span>
+            <input type="number" name="precio" id=""><br>
+            <span>Imagen</span>
+            <input type="file" name="imagen" id=""><br>
             <br>
             <input type="submit" value="Aceptar">
         </form>
