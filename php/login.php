@@ -19,7 +19,7 @@
                 <input type="password" name="contrasena" id="" placeholder="Contraseña">
                 <i class="fa-solid fa-lock"></i>
             </div>
-            <button type="submit">Iniciar Sesion</button>
+            <button type="submit" name='btnIngresar'>Iniciar Sesion</button>
         </form>
         
     </div>

@@ -1,34 +1,26 @@
 <?php
-include('conexion.php');
-if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
-    function validate($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+session_start();
+include ("conexion.php");
 
-    $Usuario = validate($_POST['usuario']);
-    $Clave = validate($_POST['contrasena']);
+// Obtener los datos del formulario
+$usuario = $_POST["usuario"];
+$contrasena = $_POST["contrasena"];
 
-    if (empty($Usuario)) {
-        header("Location : ../php/login.php?error=El Usuario es requerido");
-        exit();
-    }elseif(empty($Clave)){
-        header("Location : ../php/login.php?error=La Clave es requerida");
-        exit();
-    }else{
-        $Clave = md5($Clave);
-        $Sql = "SELECT * FROM `administrator` WHERE User = '$Usuario' AND contrasena = '$Clave'";
-        $result = mysqli_query($conexion,$Sql);
+// Consulta SQL para verificar el usuario y la contraseña
+$consulta = "SELECT user, contrasena FROM administrator WHERE user = '$usuario' AND contrasena = '$contrasena'";
+$resultado = $conexion->query($consulta);
 
-        if(mysqli_num_rows($result)===1){
-            $row = mysqli_fetch_assoc($result);
-            if($row['User']===$Usuario&& $row['contrasena']===$Clave){
-                $_SESSION['User'] = $row['Usuario'];
-                
-            }
-        }
-    }
+if ($resultado->num_rows > 0) {
+    // Inicio de sesión exitoso
+    $usuario = $resultado->fetch_assoc();
+    $_SESSION["usuario_id"] = $usuario["user"];
+    $_SESSION["usuario_nombre"] = $usuario["contrasena"];
+    header("Location: ../php/admin.php");
+    exit();
+} else {
+    // Error de inicio de sesión
+    $mensaje_error = "Usuario o contraseña incorrectos";
+    header("Location: ../php/admin.php?error=$mensaje_error");
+    exit();
 }
+?>

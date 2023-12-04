@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: Login.php");
+    exit();
+}
+
+// Resto del código de la página
+// ...
+?>
 
 
 <!DOCTYPE html>
@@ -71,6 +83,8 @@
             </tbody>
         </table>
     </div>
+
+    <a href="../Database/cerrar_sesion.php">Cerrar Sesión</a>
 </body>
 
 </html>
