@@ -18,9 +18,9 @@ if ($resultado->num_rows > 0) {
     header("Location: ../php/admin.php");
     exit();
 } else {
-    // Error de inicio de sesión
+    
     $mensaje_error = "Usuario o contraseña incorrectos";
-    header("Location: ../php/admin.php?error=$mensaje_error");
+    header("Location: ../php/login.php?error=" . urlencode($mensaje_error));
     exit();
 }
 ?>

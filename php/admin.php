@@ -73,7 +73,7 @@ if (!isset($_SESSION["usuario_id"])) {
                         <td><?php echo $row['precio']; ?></td>
                         <td><img src="data:image/jpg;base64,<?php echo base64_encode($row['ruta_imagen']); ?>"></td>
                         <td>
-                            <a href="#" class="modifi">Modificar</a> |
+                            <a href="modificar_producto.php?id=<?php echo $row['id']; ?>" class="modifi" onclick="return confirm('¿Estás seguro de que deseas modificar este producto?')">Modificar</a> |
                             <a href="../Database/proceso_eliminar.php?id=<?php echo $row['id']; ?>" class="delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
                         </td>
                     </tr>
