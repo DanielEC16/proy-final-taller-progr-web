@@ -1,0 +1,116 @@
+int led = 2;
+int rand1,rand2,rand3;
+unsigned volumen,perim,area;
+bool button1=false,button2=false,button3=false,button4=false;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
+  pinMode(3, INPUT);
+  pinMode(4, INPUT);
+  pinMode(5, INPUT);
+  pinMode(6, INPUT);
+}
+
+void loop()
+{
+  randomSeed(analogRead(0));
+  
+  
+  if(digitalRead(6)== HIGH && !button4){
+    button4 = true;
+    digitalWrite(led,HIGH);
+    rand1=random(1,100);
+    perim = 4*rand1;
+    area = rand1*rand1;
+    volumen = rand1*rand1*rand1;
+  }
+  if(digitalRead(6)== LOW && button4){
+    digitalWrite(led,LOW);
+    button4=false;
+    Serial.println("===================");
+    Serial.println("Lado : "+String(rand1));
+    Serial.println("==== CUADRADO =====");
+    Serial.println("El perimetro es :"+String(perim));
+    Serial.println("El area es : " + String(area));
+    Serial.println("El volumen es : "+String(volumen));
+  }
+  
+  
+  
+  if(digitalRead(5) == HIGH && !button3){
+    button3 = true;
+    digitalWrite(led,HIGH);
+    rand1=random(1,100);
+    rand2=random(1,100);
+    rand3=random(1,100);
+    perim = 2*(rand2+rand3);
+    area = rand2*rand3;
+    volumen = rand1*rand2*rand3;
+  }
+  if(digitalRead(5) == LOW && button3){
+    digitalWrite(led,LOW);
+    button3=false;
+    Serial.println("===================");
+    Serial.println("Profundidad : "+String(rand1));
+    Serial.println("Base : "+String(rand2));
+    Serial.println("Altura : "+String(rand3));
+    Serial.println("==== ROMBOIDE =====");
+    Serial.println("El perimetro es :"+String(perim));
+    Serial.println("El area es : " + String(area));
+    Serial.println("El volumen es : "+String(volumen));
+  }
+  
+  
+  
+  
+  if(digitalRead(4) == HIGH && !button2){
+    button2 = true;
+    digitalWrite(led,HIGH);
+    rand1=random(1,100);
+    rand2=random(1,100);
+    rand3=random(1,100);
+    perim = 2*rand1;
+    area = (rand2*rand3)/2;
+    volumen = (rand2*rand3)/3;
+  }
+  if(digitalRead(4)== LOW && button2){
+    digitalWrite(led,LOW);
+    button2=false;
+    Serial.println("===================");
+    Serial.println("Lado : "+String(rand1));
+    Serial.println("Base : "+String(rand2));
+    Serial.println("Altura : "+String(rand3));
+    Serial.println("==== TRIANGULO =====");
+    Serial.println("El perimetro es :"+String(perim));
+    Serial.println("El area es : " + String(area));
+    Serial.println("El volumen es : "+String(volumen));
+  }
+  
+  
+  
+  
+  if(digitalRead(3) == HIGH && !button1){
+    button1 = true;
+    digitalWrite(led,HIGH);
+    rand1=random(1,100);
+    rand2=random(1,100);
+    rand3=random(1,100);
+    perim = 2*(rand1+rand2);
+    area = rand1*rand2;
+    volumen = rand1 * rand2 * rand3;
+  }
+  if(digitalRead(3) == LOW && button1){
+    digitalWrite(led,LOW);
+    button1=false;
+    Serial.println("===================");
+    Serial.println("Primer numero : "+String(rand1));
+    Serial.println("Segundo numero : "+String(rand2));
+    Serial.println("Tercer numero : "+String(rand3));
+    Serial.println("==== ROMBOIDE =====");
+    Serial.println("El perimetro es :"+String(perim));
+    Serial.println("El area es : " + String(area));
+    Serial.println("El volumen es : "+String(volumen));
+  }
+}
